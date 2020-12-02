@@ -15,7 +15,9 @@ obj_file := $(cpp_file:.cc=.o)
 
 .PHONY: all
 all: $(obj_file)
-
+ifeq ($(UNAME), Linux)
+	ar rcs ext/libwebview.a ext/webview.o
+endif
 %.o: %.cc
 	$(CXX) -c -o $@ $(CFLAGS) $<
 
