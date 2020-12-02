@@ -9,8 +9,6 @@ ifeq ($(UNAME), Linux)
 CFLAGS = -DWEBVIEW_GTK=1 `pkg-config --cflags --libs gtk+-3.0 webkit2gtk-4.0`
 endif
 
-@echo $(info $(CCFLAGS))
-
 CFLAGS += -std=c++17  
 cpp_file := ext/webview.cc
 obj_file := $(cpp_file:.cc=.o)
