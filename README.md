@@ -17,6 +17,12 @@ Webview supported platforms and the engines you can expect to render your applic
 ## Pre-requisite
 If you're planning on targeting Linux you must ensure that Webkit2gtk is already installed and available for discovery via the pkg-config command.
 
+
+## CHANGE COMPILE FOR lINUX 	
+Makfile and src/lib.cr
+I requested modifications to the original
+for me it's OK 
+
 ## Installation
 
 1. Add the dependency to your `shard.yml`:
