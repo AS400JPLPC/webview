@@ -5,7 +5,7 @@ CFLAGS = -DWEBVIEW_COCOA=1 -DOBJC_OLD_DISPATCH_PROTOTYPES=1
 endif
 
 
-ifeq ($(UNAME), Linux)
+ifeq ($(UNAME), "Linux")
 CFLAGS = -DWEBVIEW_GTK=1
 endif
 
