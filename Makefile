@@ -4,8 +4,8 @@ ifeq ($(UNAME), Darwin)
 CFLAGS = -DWEBVIEW_COCOA=1 -DOBJC_OLD_DISPATCH_PROTOTYPES=1
 endif
 
-@echo $(UNAME)
-ifeq ($(UNAME), "Linux")
+
+ifeq ($(UNAME), Linux)
 CFLAGS = -DWEBVIEW_GTK=1 `pkg-config --cflags --libs gtk+-3.0 webkit2gtk-4.0`
 endif
 
