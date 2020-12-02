@@ -6,11 +6,11 @@ endif
 
 
 ifeq ($(UNAME), "Linux")
-CFLAGS = -DWEBVIEW_GTK=1
+CFLAGS = -DWEBVIEW_GTK=1  `pkg-config --cflags gtk+-3.0` `pkg-config --cflags webkit2gtk-4.0`
 endif
 
 
-CFLAGS += -std=c++11  `pkg-config --cflags --libs gtk+-3.0 webkit2gtk-4.0`
+CFLAGS += -std=c++11  `pkg-config --libs gtk+-3.0` `pkg-config --libs webkit2gtk-4.0`
 cpp_file := ext/webview.cc
 obj_file := $(cpp_file:.cc=.o)
 
